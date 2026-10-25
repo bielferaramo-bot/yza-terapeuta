@@ -59,6 +59,12 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+section[id], [id] {
+  scroll-margin-top: 86px;
 }
 
 body {
@@ -3769,7 +3775,7 @@ button {
   }
   .main-nav {
     position: absolute;
-    top: 80px;
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: rgba(253, 250, 246, 0.98);
@@ -3802,245 +3808,835 @@ button {
 }
 
 @media (max-width: 768px) {
+  /* Top Announcement Bar */
+  .top-announcement {
+    padding: 7px 0;
+    font-size: 0.74rem;
+  }
+  .top-announcement-flex {
+    justify-content: center;
+    text-align: center;
+  }
+  .top-action-btn {
+    display: none;
+  }
+
+  /* Site Header & Mobile Nav */
+  .site-header {
+    background-color: rgba(253, 250, 246, 0.98);
+  }
   .header-container {
-    height: 72px;
+    height: 68px;
     padding: 0 16px;
-    gap: 10px;
+    gap: 12px;
   }
   .site-logo-img {
     height: 38px;
-    max-width: 190px;
+    max-width: 175px;
+  }
+  .header-actions {
+    gap: 8px;
   }
   .header-cta-btn {
-    padding: 8px 14px;
-    font-size: 0.8125rem;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    gap: 6px;
   }
-  .hero-headline { font-size: 2.6rem; }
-  .section-title { font-size: 2.1rem; }
-  .final-headline { font-size: 2.1rem; }
-  .ig-pill-link span { display: none; }
-  .ig-pill-link { padding: 8px 10px; }
-  .footer-top-row { grid-template-columns: 1fr; }
-  
-  /* Hero card & badge adjustments */
-  .hero-quote-card {
-    position: static;
-    margin: 22px auto 0;
-    max-width: 100%;
-    left: 0;
-    bottom: 0;
-    text-align: left;
+  .ig-pill-link {
+    padding: 8px 10px;
   }
-  .hero-seal-badge {
-    top: -12px;
-    right: -10px;
-    width: 84px;
-    height: 84px;
-  }
-  .frame-backdrop-card {
-    top: 14px;
-    left: 14px;
-    right: -14px;
-    bottom: -14px;
-  }
-  .meta-divider {
+  .ig-pill-link span {
     display: none;
   }
-  .hero-meta-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 18px 20px;
-  }
-  .stat-sep {
-    display: none;
-  }
-  .hero-proof-stats {
-    flex-wrap: wrap;
-    gap: 18px;
-    justify-content: space-around;
-  }
-  .stat-block {
-    flex: 1 1 130px;
-    text-align: center;
-  }
-  .stat-label {
-    max-width: 100%;
-    text-align: center;
+  .main-nav {
+    top: 100%;
+    padding: 20px 24px;
+    box-shadow: 0 16px 36px rgba(44, 36, 32, 0.14);
   }
 
-  /* Narrative visual adjustments for mobile */
-  .narrative-visual-half { min-height: 420px; }
-  .narrative-caption-glass {
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    padding: 12px 16px;
-    gap: 12px;
+  /* Section Spacing & Anchors */
+  section[id], [id] {
+    scroll-margin-top: 72px;
   }
-  .caption-glass-seal {
-    width: 38px;
-    height: 38px;
-    font-size: 1rem;
+  .container {
+    padding: 0 16px;
   }
-  .caption-glass-text p { font-size: 0.95rem; }
-  .eva-story-badge {
-    top: 16px;
-    left: 16px;
-    padding: 6px 12px;
+  .section-title {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+  .section-tag {
     font-size: 0.72rem;
+    padding: 5px 14px;
+    letter-spacing: 1.5px;
   }
 
-  /* Padding refinements so content breathes */
-  .pains-interactive-grid { grid-template-columns: 1fr; gap: 16px; }
-  .pain-card { min-height: auto; padding: 24px 20px; }
-  .pains-summary-card {
-    flex-direction: column;
+  /* ----------------------------------------------------
+     1. MASTER HERO SECTION (Fixes Screenshot 1)
+     ---------------------------------------------------- */
+  .master-hero {
+    padding: 30px 0 50px;
+  }
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
     text-align: center;
-    padding: 34px 22px;
-    gap: 24px;
   }
-  .summary-action-col { width: 100%; }
-  .summary-cta-button { width: 100%; justify-content: center; }
-  .eva-main-box { padding: 36px 20px; }
-  .eva-pillars-grid { grid-template-columns: 1fr; gap: 14px; }
-  .about-ref-card {
-    padding: 36px 20px 30px;
-    border-radius: 24px;
-  }
-  .about-ref-photo-img {
-    height: 400px;
-  }
-  .about-ref-title {
-    font-size: 2.35rem;
-  }
-  .cred-tier-row {
+  .hero-copy-column {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
   }
-  .ref-cred-pill {
+  .pill-badge {
+    margin-bottom: 18px;
+    font-size: 0.75rem;
+  }
+  .hero-headline {
+    font-size: 2.3rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+  .hero-subhead {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 26px;
+    max-width: 100%;
+  }
+  .hero-cta-group {
     width: 100%;
-    font-size: 0.82rem;
-    padding: 10px 14px;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
   }
-  .about-ref-main-btn {
-    width: 100%;
-    padding: 16px 20px;
-    font-size: 0.86rem;
-    letter-spacing: 1px;
-  }
-  .constellation-interactive-box {
-    padding: 28px 18px;
-    border-radius: 22px;
-  }
-  .table-field-board {
-    height: 380px;
-    max-width: 380px;
-  }
-  .board-cardinal-label {
-    font-size: 0.56rem;
-    padding: 3px 10px;
-    letter-spacing: 0.8px;
-  }
-  .mark-future {
-    top: 18px;
-  }
-  .mark-past {
-    bottom: 18px;
-  }
-  .systemic-figurine {
-    width: 46px;
-    height: 64px;
-  }
-  .figurine-icon-art {
-    width: 30px;
-    height: 42px;
-  }
-  .figurine-label {
-    font-size: 0.62rem;
-    padding: 1px 6px;
-  }
-  .constellation-topics-grid {
-    grid-template-columns: 1fr;
-  }
-  .constellation-pillars-strip {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .scenario-buttons-row {
-    width: 100%;
-  }
-  .scenario-btn {
-    width: 100%;
-    justify-content: center;
-  }
-  .final-banner-box { padding: 44px 22px; }
-
-  /* Diagnostic Box Mobile */
-  .systemic-diagnostic-box {
-    padding: 36px 20px;
-    border-radius: 22px;
-    margin: 40px 0 60px;
-  }
-  .diagnostic-headline {
-    font-size: 1.85rem;
-  }
-  .diag-option-card {
-    padding: 18px 16px;
-    gap: 14px;
-  }
-  .diag-result-card {
-    padding: 32px 18px;
-    border-radius: 20px;
-  }
-  .diag-res-title {
-    font-size: 1.8rem;
-  }
-  .diag-res-btn {
+  .hero-cta-group .btn {
     width: 100%;
     justify-content: center;
     padding: 16px 20px;
     font-size: 0.95rem;
   }
+  .hero-meta-strip {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 18px;
+    border-radius: 18px;
+  }
+  .meta-divider {
+    display: none;
+  }
+  .meta-item {
+    font-size: 0.82rem;
+    text-align: center;
+  }
+  .hero-proof-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .stat-sep {
+    display: none;
+  }
+  .stat-block {
+    text-align: center;
+    padding: 8px 4px;
+  }
+  .stat-num {
+    font-size: 1.6rem;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    text-align: center;
+    line-height: 1.35;
+  }
 
-  /* Floating WhatsApp on mobile */
+  /* Hero Portrait Frame Clean Layout (Removes giant beige box!) */
+  .hero-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image-frame {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .frame-backdrop-card {
+    display: none !important; /* Completely eliminates the blank card artifact */
+  }
+  .hero-portrait-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 3 / 3.9;
+    border-radius: 24px;
+    box-shadow: 0 16px 36px rgba(43, 29, 23, 0.12);
+    border: 3px solid #FFFFFF;
+    margin: 0 auto;
+    display: block;
+  }
+  .hero-seal-badge {
+    top: -12px;
+    right: -6px;
+    width: 74px;
+    height: 74px;
+  }
+  .hero-quote-card {
+    position: static;
+    margin: 18px auto 0;
+    width: 100%;
+    max-width: 320px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    text-align: left;
+    box-shadow: 0 12px 30px rgba(43, 29, 23, 0.08);
+  }
+  .hero-quote-card p {
+    font-size: 0.98rem;
+    line-height: 1.45;
+    margin-bottom: 6px;
+  }
+  .hero-quote-author {
+    font-size: 0.72rem;
+  }
+
+  /* ----------------------------------------------------
+     2. DORES / CONFLITOS SECTION (Fixes Screenshot 5)
+     ---------------------------------------------------- */
+  .pains-master-section {
+    padding: 50px 0;
+  }
+  .pains-interactive-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .pain-card {
+    padding: 20px 18px;
+    border-radius: 18px;
+    min-height: auto;
+  }
+  .pain-card-header {
+    margin-bottom: 14px;
+  }
+  .pain-icon-chip {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .pain-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  .pain-card p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  .pains-summary-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 26px 16px;
+    border-radius: 20px;
+    gap: 18px;
+    margin-top: 24px;
+  }
+  .summary-icon-box {
+    width: 52px;
+    height: 52px;
+    font-size: 1.35rem;
+    margin: 0 auto;
+  }
+  .summary-text-col {
+    flex: 1 1 auto;
+  }
+  .summary-pre-badge {
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+  }
+  .summary-text-col h3 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .summary-text-col p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  .summary-action-col {
+    width: 100%;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .summary-cta-button {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 18px;
+    font-size: 0.92rem;
+  }
+  .summary-sub-note {
+    font-size: 0.74rem;
+    text-align: center;
+  }
+
+  /* ----------------------------------------------------
+     3. AS 3 LEIS SISTÊMICAS
+     ---------------------------------------------------- */
+  .laws-section {
+    padding: 50px 0;
+  }
+  .laws-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .law-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+  .law-number {
+    font-size: 3.8rem;
+    top: 10px;
+    right: 18px;
+  }
+  .law-title {
+    font-size: 1.45rem;
+  }
+  .law-description {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  /* ----------------------------------------------------
+     4. SYSTEMIC DIAGNOSTIC QUIZ (Fixes Screenshot 3)
+     ---------------------------------------------------- */
+  .systemic-diagnostic-box {
+    padding: 26px 14px;
+    border-radius: 20px;
+    margin: 32px 0 45px;
+  }
+  .diagnostic-intro-header {
+    margin-bottom: 24px;
+  }
+  .diagnostic-badge {
+    font-size: 0.7rem;
+    padding: 5px 14px;
+    margin-bottom: 10px;
+  }
+  .diagnostic-headline {
+    font-size: 1.55rem;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .diagnostic-subtitle {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .diagnostic-progress-wrap {
+    max-width: 100%;
+  }
+  .diag-question-title {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin-bottom: 18px;
+  }
+  .diag-options-grid {
+    gap: 12px;
+  }
+  .diag-option-card {
+    padding: 14px 14px;
+    gap: 12px;
+    border-radius: 16px;
+    align-items: flex-start;
+  }
+  .diag-option-letter {
+    width: 32px;
+    height: 32px;
+    font-size: 0.92rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .diag-option-arrow {
+    display: none !important; /* Frees crucial horizontal space so text breathes */
+  }
+  .diag-option-content strong {
+    font-size: 0.96rem;
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+  .diag-option-content p {
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+  .diag-result-card {
+    padding: 26px 16px;
+    border-radius: 18px;
+  }
+  .diag-res-title {
+    font-size: 1.55rem;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .diag-res-desc {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+  .diag-res-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 18px;
+    font-size: 0.92rem;
+  }
+
+  /* ----------------------------------------------------
+     5. GRUPO EVA SECTION (Fixes Screenshot 4)
+     ---------------------------------------------------- */
+  .eva-master-section {
+    padding: 50px 0;
+  }
+  .eva-main-box {
+    padding: 26px 14px;
+    border-radius: 20px;
+  }
+  .eva-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .eva-pillar-card {
+    padding: 22px 16px;
+    border-radius: 16px;
+  }
+  .pillar-icon-box {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+  .eva-pillar-card strong {
+    font-size: 1.15rem;
+  }
+  .eva-pillar-card p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  .steps-title {
+    font-size: 1.55rem;
+    margin-bottom: 24px;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .step-card-eva {
+    padding: 22px 16px;
+    border-radius: 16px;
+  }
+  .step-circle {
+    width: 42px;
+    height: 42px;
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+  }
+  .step-card-eva h4 {
+    font-size: 1.2rem;
+  }
+  .step-card-eva p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  .safe-space-box {
+    padding: 22px 14px;
+    border-radius: 18px;
+  }
+  .safe-badges {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .safe-pill {
+    padding: 5px 10px;
+    font-size: 0.74rem;
+  }
+  .safe-text {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .safe-action {
+    width: 100%;
+  }
+  .safe-action .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 18px;
+    font-size: 0.92rem;
+  }
+  .safe-micro-note {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  /* ----------------------------------------------------
+     6. CONSTELLATION INTERACTIVE BOARD (Fixes Screenshot 2)
+     ---------------------------------------------------- */
+  .constellation-master-section {
+    padding: 50px 0;
+  }
+  .constellation-interactive-box {
+    padding: 22px 14px;
+    border-radius: 20px;
+  }
+  .table-scenario-switcher {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+  }
+  .switcher-lead {
+    font-size: 0.78rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .scenario-buttons-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .scenario-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+  .constellation-split-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 28px;
+  }
+  .constellation-board-frame {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .table-field-board {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: 300px !important;
+    aspect-ratio: 1 / 1 !important;
+    margin: 0 auto !important;
+    border-width: 5px;
+  }
+  .board-cardinal-label {
+    font-size: 0.52rem;
+    padding: 2px 8px;
+    letter-spacing: 0.6px;
+  }
+  .mark-future {
+    top: 14px;
+  }
+  .mark-past {
+    bottom: 14px;
+  }
+  .systemic-figurine {
+    width: 38px;
+    height: 52px;
+  }
+  .figurine-icon-art {
+    width: 24px;
+    height: 34px;
+  }
+  .figurine-label {
+    font-size: 0.55rem;
+    padding: 1px 4px;
+  }
+  .board-action-bar {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .btn-harmonize-field {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 0.88rem;
+  }
+  .board-click-hint {
+    font-size: 0.74rem;
+  }
+  .field-insight-card {
+    padding: 20px 16px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+  }
+  .insight-headline {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+  .insight-body-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .constellation-topics-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .topic-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+  .constellation-pillars-strip {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* ----------------------------------------------------
+     7. SOBRE A YZA SECTION
+     ---------------------------------------------------- */
+  .about-ref-section {
+    padding: 50px 0;
+  }
+  .about-ref-card {
+    padding: 28px 16px 24px;
+    border-radius: 20px;
+  }
+  .about-ref-main-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .about-ref-photo-frame {
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 22px;
+    border-width: 3px;
+  }
+  .about-ref-photo-img {
+    height: 360px;
+    max-width: 300px;
+  }
+  .about-ref-tag-pill {
+    align-self: center;
+    font-size: 0.72rem;
+    margin-bottom: 12px;
+  }
+  .about-ref-title {
+    font-size: 2.1rem;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .about-ref-lead {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .about-ref-text-block p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+  .cred-tier-row {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .ref-cred-pill {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 10px 14px;
+  }
+  .about-ref-main-btn {
+    width: 100%;
+    padding: 15px 18px;
+    font-size: 0.86rem;
+  }
+
+  /* ----------------------------------------------------
+     8. FAQ SECTION
+     ---------------------------------------------------- */
+  .faq-master-section {
+    padding: 50px 0;
+  }
+  .faq-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .faq-direct-card {
+    padding: 22px 16px;
+    border-radius: 18px;
+  }
+  .faq-panel-item {
+    border-radius: 16px;
+  }
+  .faq-btn {
+    padding: 18px 16px;
+    font-size: 1.05rem;
+  }
+  .faq-panel-item.active .faq-content-box {
+    padding: 0 16px 20px 16px;
+  }
+  .faq-content-box p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  /* ----------------------------------------------------
+     9. FINAL BANNER & FOOTER
+     ---------------------------------------------------- */
+  .final-banner-section {
+    padding: 50px 0;
+  }
+  .final-banner-box {
+    padding: 40px 18px;
+    border-radius: 22px;
+  }
+  .final-headline {
+    font-size: 2.1rem;
+    line-height: 1.25;
+  }
+  .final-sub {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+  .final-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
+  .footer-top-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-brand-col {
+    align-items: center;
+  }
+  .footer-social-links {
+    justify-content: center;
+  }
+
+  /* ----------------------------------------------------
+     10. FLOATING WHATSAPP BUTTON (Ergonomic mobile target)
+     ---------------------------------------------------- */
   .floating-wa-box {
-    right: 16px;
-    bottom: 16px;
+    right: 14px;
+    bottom: 14px;
+  }
+  .wa-toggle-circle {
+    width: 52px;
+    height: 52px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+  .wa-toggle-circle i {
+    font-size: 1.55rem;
+  }
+  .wa-pulse-glow {
+    display: none; /* Reduce visual noise on mobile screens */
   }
   .wa-chat-window {
-    width: calc(100vw - 32px);
-    max-width: 330px;
+    width: calc(100vw - 28px);
+    max-width: 320px;
     right: 0;
-    bottom: 74px;
+    bottom: 66px;
+    border-radius: 18px;
   }
 }
 
 @media (max-width: 520px) {
   .header-container {
-    height: 76px;
-    padding: 0 18px;
+    height: 68px;
+    padding: 0 14px;
   }
   .site-logo-img {
-    height: 46px;
+    height: 35px;
+    max-width: 160px;
+  }
+  .header-cta-btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
   }
   .header-cta-btn span {
     display: none;
   }
-  .header-cta-btn {
-    padding: 8px 12px;
+  .header-cta-btn i {
+    font-size: 1.15rem;
+  }
+  .hero-headline {
+    font-size: 2.05rem;
+    line-height: 1.18;
   }
   .hero-proof-stats {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 14px;
-    text-align: center;
+    gap: 10px;
+  }
+  .stat-block {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 14px;
+    border: 1px solid rgba(200, 157, 102, 0.18);
   }
   .stat-label {
     text-align: center;
+    font-size: 0.78rem;
   }
-  .about-ref-title { font-size: 2.1rem; }
-  .about-ref-photo-img { height: 340px; }
-  .narrative-title { font-size: 2.1rem; }
-  .narrative-lead::first-letter { font-size: 3rem; }
+  .section-title {
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+  .table-field-board {
+    max-width: 270px !important;
+    height: 270px !important;
+  }
+  .about-ref-title {
+    font-size: 1.85rem;
+  }
+  .about-ref-photo-img {
+    height: 300px;
+  }
+  .narrative-title {
+    font-size: 1.85rem;
+  }
+  .narrative-lead::first-letter {
+    font-size: 2.5rem;
+  }
+  .final-headline {
+    font-size: 1.85rem;
+  }
+  .final-banner-box {
+    padding: 34px 14px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .table-field-board {
+    max-width: 240px !important;
+    height: 240px !important;
+  }
+  .hero-headline {
+    font-size: 1.85rem;
+  }
+  .section-title {
+    font-size: 1.65rem;
+  }
+  .systemic-figurine {
+    width: 34px;
+    height: 48px;
+  }
+  .figurine-icon-art {
+    width: 22px;
+    height: 30px;
+  }
 }
