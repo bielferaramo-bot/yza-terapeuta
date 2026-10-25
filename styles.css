@@ -689,6 +689,37 @@ button {
   transform: rotate(8deg) scale(1.04);
 }
 
+/* Hero Name Pill on Portrait */
+.hero-name-pill {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 157, 102, 0.45);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--color-walnut);
+  box-shadow: 0 8px 24px rgba(43, 29, 23, 0.12);
+  z-index: 3;
+}
+
+.hero-name-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(200, 157, 102, 0.28);
+}
+
 /* ==========================================================
    The Story of Eve: Narrative Parallax Art Section
    ========================================================== */
@@ -3696,6 +3727,13 @@ button {
     right: -6px;
     width: 74px;
     height: 74px;
+  }
+  .hero-name-pill {
+    top: 14px;
+    left: 14px;
+    font-size: 0.74rem;
+    padding: 6px 13px;
+    box-shadow: 0 4px 14px rgba(43, 29, 23, 0.1);
   }
   .hero-quote-card {
     position: static;
