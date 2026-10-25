@@ -728,6 +728,11 @@ button {
   background-color: var(--bg-cream);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.narrative-container {
+  overflow: hidden;
 }
 
 .narrative-banner {
@@ -957,9 +962,9 @@ button {
 
 .caption-glass-pre {
   display: block;
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   color: #DFB983;
   text-transform: uppercase;
   margin-bottom: 2px;
@@ -1303,9 +1308,9 @@ button {
 
 .summary-pre-badge {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   color: var(--color-terracotta);
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -3189,9 +3194,9 @@ button {
 }
 
 .footer-logo-sub {
-  font-size: 0.65rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   color: var(--color-gold);
   margin-bottom: 18px;
 }
@@ -3387,9 +3392,25 @@ button {
 .wa-chat-close {
   position: absolute;
   top: 10px;
-  right: 14px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.3rem;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wa-chat-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
 }
 
 .wa-chat-message-box {
@@ -3803,8 +3824,8 @@ button {
     flex: 1 1 auto;
   }
   .summary-pre-badge {
-    font-size: 0.68rem;
-    letter-spacing: 1.5px;
+    font-size: 0.74rem;
+    letter-spacing: 1.6px;
     margin-bottom: 6px;
   }
   .summary-text-col h3 {
@@ -3835,19 +3856,28 @@ button {
   /* ----------------------------------------------------
      2.1 NARRATIVE BANNER (EVA HISTÓRIA)
      ---------------------------------------------------- */
+  .narrative-section,
+  .narrative-container,
+  .narrative-banner {
+    overflow: hidden;
+  }
   .narrative-banner {
     grid-template-columns: 1fr;
     border-radius: 20px;
-    overflow: hidden;
   }
   .narrative-visual-half {
-    min-height: 360px;
+    min-height: 340px;
     overflow: hidden;
     contain: paint;
   }
   .eva-sunbeam-leak {
-    max-width: 100%;
-    right: 0;
+    width: 200px;
+    height: 200px;
+    max-width: 80%;
+    right: 15px;
+    top: -20px;
+    filter: blur(16px);
+    transform-origin: top right;
   }
 
   /* ----------------------------------------------------
