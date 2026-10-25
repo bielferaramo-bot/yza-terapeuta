@@ -18,7 +18,7 @@
   <!-- FontAwesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="stylesheet" href="styles.css?v=23">
+  <link rel="stylesheet" href="styles.css?v=24">
 </head>
 <body>
 
@@ -738,6 +738,17 @@
       <!-- Interactive Master Container -->
       <div class="constellation-interactive-box">
         
+        <!-- Mobile Intro Card: Explaining the bonecos in the live session (Mobile-only) -->
+        <div class="constellation-mobile-intro">
+          <div class="mobile-intro-header">
+            <span class="mobile-intro-badge"><i class="fa-solid fa-shapes"></i> Sessão Individual · 2 Horas</span>
+            <span class="mobile-intro-sub">Online com Yzadora Bet</span>
+          </div>
+          <p class="mobile-intro-p">
+            Na chamada de vídeo, a Yza posiciona os <strong>bonecos reais sobre a mesa</strong> para materializar a sua família e o seu lugar de força. Selecione um padrão abaixo para entender o bloqueio e a cura:
+          </p>
+        </div>
+
         <!-- Scenario Switcher Bar -->
         <div class="table-scenario-switcher">
           <span class="switcher-lead"><i class="fa-solid fa-shapes"></i> Escolha um Padrão Sistêmico:</span>
@@ -931,9 +942,15 @@
               <div class="insight-healing-box" id="insight-healing-box">
                 <div class="healing-tag" id="healing-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Frase de Cura Sagrada:</div>
                 <p id="insight-healing-phrase">
-                  <span class="healing-placeholder-text"><i class="fa-solid fa-hand-pointer"></i> Clique no botão <strong>Harmonizar Campo</strong> abaixo para reorganizar os bonecos e gerar a frase de cura desta dinâmica.</span>
+                  <span class="healing-placeholder-text"><i class="fa-solid fa-hand-pointer"></i> Clique no botão <strong>Harmonizar Campo</strong> para acessar a frase de cura desta dinâmica.</span>
                 </p>
               </div>
+
+              <!-- Mobile Harmonize Button (Mobile-only) -->
+              <button type="button" class="btn-harmonize-mobile" id="btn-harmonize-mobile">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Ver Frase de Cura Sagrada</span>
+              </button>
             </div>
 
             <!-- Session Core Topics -->
@@ -1365,6 +1382,6 @@
     </button>
   </div>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=24"></script>
 </body>
 </html>

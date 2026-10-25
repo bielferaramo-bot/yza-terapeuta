@@ -2234,6 +2234,12 @@ button {
   box-shadow: 0 0 8px #DFB983;
 }
 
+/* Mobile elements hidden on Desktop */
+.constellation-mobile-intro,
+.btn-harmonize-mobile {
+  display: none;
+}
+
 /* Split Layout: Board vs Content */
 .constellation-split-layout {
   display: grid;
@@ -4187,8 +4193,12 @@ button {
   .diag-res-btn {
     width: 100%;
     justify-content: center;
-    padding: 14px 18px;
-    font-size: 0.92rem;
+    padding: 14px 14px;
+    font-size: 0.88rem;
+    gap: 8px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
   }
 
   /* ----------------------------------------------------
@@ -4280,7 +4290,7 @@ button {
   }
 
   /* ----------------------------------------------------
-     6. CONSTELLATION INTERACTIVE BOARD (Fixes Screenshot 2)
+     6. CONSTELLATION INTERACTIVE BOARD (Mobile: Lightweight Card Mode!)
      ---------------------------------------------------- */
   .constellation-master-section {
     padding: 50px 0;
@@ -4289,11 +4299,51 @@ button {
     padding: 22px 14px;
     border-radius: 20px;
   }
+  .constellation-mobile-intro {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid rgba(200, 157, 102, 0.35);
+    border-radius: 18px;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(43, 29, 23, 0.04);
+  }
+  .mobile-intro-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .mobile-intro-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--color-terracotta);
+    text-transform: uppercase;
+  }
+  .mobile-intro-sub {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+  }
+  .mobile-intro-p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: #5A4A3E;
+    margin: 0;
+  }
+  .mobile-intro-p strong {
+    color: var(--color-walnut);
+  }
   .table-scenario-switcher {
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding-bottom: 16px;
   }
   .switcher-lead {
@@ -4315,60 +4365,40 @@ button {
   }
   .constellation-split-layout {
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin-bottom: 28px;
+    gap: 0;
+    margin-bottom: 20px;
   }
-  .constellation-board-frame {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+  /* Mobile: remove the heavy bonecos board as requested */
+  .table-visual-column {
+    display: none !important;
   }
-  .table-field-board {
-    width: 100% !important;
-    max-width: 300px !important;
-    height: 300px !important;
-    aspect-ratio: 1 / 1 !important;
-    margin: 0 auto !important;
-    border-width: 5px;
-  }
-  .board-cardinal-label {
-    font-size: 0.52rem;
-    padding: 2px 8px;
-    letter-spacing: 0.6px;
-  }
-  .mark-future {
-    top: 14px;
-  }
-  .mark-past {
-    bottom: 14px;
-  }
-  .systemic-figurine {
-    width: 38px;
-    height: 52px;
-  }
-  .figurine-icon-art {
-    width: 24px;
-    height: 34px;
-  }
-  .figurine-label {
-    font-size: 0.55rem;
-    padding: 1px 4px;
-  }
-  .board-action-bar {
+  .btn-harmonize-mobile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     width: 100%;
     margin-top: 16px;
-  }
-  .btn-harmonize-field {
-    width: 100%;
-    justify-content: center;
-    padding: 12px 18px;
+    padding: 13px 18px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, #DFB983 0%, #C89D66 50%, #B58B53 100%);
+    color: #1E140E;
+    font-family: var(--font-sans);
+    font-weight: 700;
     font-size: 0.88rem;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(200, 157, 102, 0.35);
+    transition: all 0.28s ease;
   }
-  .board-click-hint {
-    font-size: 0.74rem;
+  .btn-harmonize-mobile.active {
+    background: linear-gradient(135deg, #3C7D57 0%, #285F3E 100%);
+    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(40, 95, 62, 0.35);
   }
   .field-insight-card {
-    padding: 20px 16px;
+    padding: 22px 16px;
     border-radius: 18px;
     margin-bottom: 18px;
   }
@@ -4595,10 +4625,6 @@ button {
     font-size: 1.8rem;
     line-height: 1.25;
   }
-  .table-field-board {
-    max-width: 270px !important;
-    height: 270px !important;
-  }
   .about-ref-title {
     font-size: 1.85rem;
   }
@@ -4621,22 +4647,10 @@ button {
 }
 
 @media (max-width: 360px) {
-  .table-field-board {
-    max-width: 240px !important;
-    height: 240px !important;
-  }
   .hero-headline {
     font-size: 1.85rem;
   }
   .section-title {
     font-size: 1.65rem;
-  }
-  .systemic-figurine {
-    width: 34px;
-    height: 48px;
-  }
-  .figurine-icon-art {
-    width: 22px;
-    height: 30px;
   }
 }

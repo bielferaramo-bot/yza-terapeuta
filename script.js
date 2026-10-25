@@ -299,6 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableBoard = document.getElementById('table-field-board');
   const scenarioBtns = document.querySelectorAll('.scenario-btn');
   const btnHarmonize = document.getElementById('btn-harmonize-field');
+  const btnHarmonizeMobile = document.getElementById('btn-harmonize-mobile');
   const boardEnergySvg = document.getElementById('board-energy-svg');
   const systemicFigurines = document.querySelectorAll('.systemic-figurine');
 
@@ -507,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
         healingTag.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> Frase de Cura Sagrada:';
       }
       if (insightHealingPhrase) {
-        insightHealingPhrase.innerHTML = '<span class="healing-placeholder-text"><i class="fa-solid fa-hand-pointer"></i> Clique no botão <strong>Harmonizar Campo</strong> abaixo para reorganizar os bonecos e gerar a frase de cura desta dinâmica.</span>';
+        insightHealingPhrase.innerHTML = '<span class="healing-placeholder-text"><i class="fa-solid fa-wand-magic-sparkles"></i> Clique no botão <strong>Harmonizar Campo</strong> para acessar a frase de cura desta dinâmica.</span>';
       }
     }
 
@@ -523,6 +524,16 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         btnHarmonize.classList.remove('active');
         btnHarmonize.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i> <span>Harmonizar Campo (Frase de Cura)</span>`;
+      }
+    }
+
+    if (btnHarmonizeMobile) {
+      if (harmonizedState) {
+        btnHarmonizeMobile.classList.add('active');
+        btnHarmonizeMobile.innerHTML = `<i class="fa-solid fa-rotate-left"></i> <span>Ver Padrão com Bloqueio</span>`;
+      } else {
+        btnHarmonizeMobile.classList.remove('active');
+        btnHarmonizeMobile.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i> <span>Ver Frase de Cura Sagrada</span>`;
       }
     }
 
@@ -543,6 +554,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnHarmonize) {
     btnHarmonize.addEventListener('click', () => {
+      isHarmonized = !isHarmonized;
+      renderFieldState(currentScenarioKey, isHarmonized);
+    });
+  }
+
+  if (btnHarmonizeMobile) {
+    btnHarmonizeMobile.addEventListener('click', () => {
       isHarmonized = !isHarmonized;
       renderFieldState(currentScenarioKey, isHarmonized);
     });
