@@ -3404,10 +3404,23 @@ button {
    Responsive
    ========================================================== */
 @media (max-width: 1024px) {
-  .hero-layout { grid-template-columns: 1fr; text-align: center; gap: 40px; }
-  .pill-badge, .hero-cta-row { justify-content: center; }
-  .hero-meta-strip { justify-content: center; }
-  .hero-proof-stats { justify-content: center; }
+  .hero-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+  .hero-copy-column {
+    display: contents;
+  }
+  .pill-badge { order: 1; justify-content: center; margin-bottom: 18px; }
+  .hero-headline { order: 2; margin-bottom: 18px; }
+  .hero-paragraph { order: 3; margin-bottom: 24px; }
+  .hero-visual { order: 4; width: 100%; margin: 10px 0 26px; }
+  .hero-meta-strip { order: 5; justify-content: center; margin-bottom: 26px; }
+  .hero-cta-row { order: 6; justify-content: center; margin-bottom: 28px; }
+  .hero-proof-stats { order: 7; justify-content: center; margin-top: 10px; }
   .pains-interactive-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
   .narrative-banner { grid-template-columns: 1fr; }
   .laws-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -3585,49 +3598,60 @@ button {
     padding: 30px 0 50px;
   }
   .hero-layout {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    text-align: center;
-  }
-  .hero-copy-column {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0;
+    text-align: center;
+  }
+  .hero-copy-column {
+    display: contents;
   }
   .pill-badge {
+    order: 1;
     margin-bottom: 18px;
     font-size: 0.75rem;
   }
   .hero-headline {
+    order: 2;
     font-size: 2.3rem;
     line-height: 1.2;
     margin-bottom: 18px;
   }
   .hero-paragraph {
+    order: 3;
     font-size: 1.02rem;
     line-height: 1.6;
-    margin-bottom: 26px;
+    margin-bottom: 22px;
     max-width: 100%;
   }
-  .hero-cta-row {
+  .hero-visual {
+    order: 4;
     width: 100%;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 30px;
-  }
-  .hero-cta-row .btn {
-    width: 100%;
-    justify-content: center;
-    padding: 16px 20px;
-    font-size: 0.95rem;
+    margin: 8px 0 24px;
   }
   .hero-meta-strip {
+    order: 5;
     width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 16px 18px;
     border-radius: 18px;
+    margin-bottom: 24px;
+  }
+  .hero-cta-row {
+    order: 6;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .hero-cta-row .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 20px;
+    font-size: 0.95rem;
   }
   .meta-divider {
     display: none;
@@ -3637,11 +3661,12 @@ button {
     text-align: center;
   }
   .hero-proof-stats {
+    order: 7;
+    margin-top: 14px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    margin-top: 24px;
   }
   .stat-sep {
     display: none;
