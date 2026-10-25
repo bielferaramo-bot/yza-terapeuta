@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     diagRestartBtn.addEventListener('click', resetDiagnostic);
   }
 
-  // 6. Interactive 3D Tilt for Eva Narrative Image
+  // 8. Interactive 3D Tilt for Eva Narrative Image
   const evaFrame = document.getElementById('eva-visual-frame');
   if (evaFrame && window.matchMedia('(min-width: 1025px)').matches) {
     evaFrame.addEventListener('mousemove', (e) => {

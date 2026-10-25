@@ -363,9 +363,7 @@ button {
 }
 
 .btn-sm { padding: 10px 22px; font-size: 0.875rem; }
-.btn-md { padding: 13px 28px; font-size: 0.95rem; }
 .btn-lg { padding: 16px 36px; font-size: 1.05rem; }
-.btn-xl { padding: 18px 46px; font-size: 1.15rem; }
 
 .btn-primary {
   background-color: var(--color-terracotta);
@@ -2448,47 +2446,6 @@ button {
   line-height: 1.35;
 }
 
-/* Real Session Callout */
-.real-session-callout {
-  background: #FFFFFF;
-  border: 1px solid rgba(200, 157, 102, 0.35);
-  border-radius: 18px;
-  padding: 14px 18px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 14px rgba(43, 29, 23, 0.04);
-}
-
-.real-callout-icon {
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(223, 185, 131, 0.22), rgba(184, 91, 53, 0.12));
-  border: 1px solid rgba(200, 157, 102, 0.4);
-  color: var(--color-terracotta);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.35rem;
-  box-shadow: 0 4px 12px rgba(184, 91, 53, 0.08);
-}
-
-.real-callout-text strong {
-  display: block;
-  font-size: 0.88rem;
-  color: var(--color-walnut);
-  margin-bottom: 2px;
-}
-
-.real-callout-text p {
-  font-size: 0.8rem;
-  color: #6C5A4E;
-  line-height: 1.45;
-  margin: 0;
-}
 
 /* CTA Row */
 .constellation-cta-row {
@@ -3477,19 +3434,6 @@ button {
     padding-left: 0;
     padding-top: 14px;
   }
-  .constellation-split-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .constellation-interactive-box {
-    padding: 36px 26px;
-    border-radius: 28px;
-  }
-  .table-scenario-switcher {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
   .constellation-pillars-strip {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -3659,20 +3603,18 @@ button {
     line-height: 1.2;
     margin-bottom: 18px;
   }
-  .hero-subhead {
+  .hero-paragraph {
     font-size: 1.02rem;
     line-height: 1.6;
     margin-bottom: 26px;
     max-width: 100%;
   }
-  .hero-cta-group,
   .hero-cta-row {
     width: 100%;
     flex-direction: column;
     gap: 12px;
     margin-bottom: 30px;
   }
-  .hero-cta-group .btn,
   .hero-cta-row .btn {
     width: 100%;
     justify-content: center;
@@ -3778,7 +3720,7 @@ button {
   /* ----------------------------------------------------
      2. DORES / CONFLITOS SECTION (Fixes Screenshot 5)
      ---------------------------------------------------- */
-  .pains-master-section {
+  .pains-section {
     padding: 50px 0;
   }
   .pains-interactive-grid {
@@ -3902,7 +3844,7 @@ button {
   .law-title {
     font-size: 1.45rem;
   }
-  .law-description {
+  .law-desc {
     font-size: 0.92rem;
     line-height: 1.6;
   }
@@ -3978,7 +3920,7 @@ button {
     line-height: 1.25;
     margin-bottom: 10px;
   }
-  .diag-res-desc {
+  .diag-res-lead {
     font-size: 0.92rem;
     line-height: 1.55;
     margin-bottom: 22px;
@@ -3997,7 +3939,7 @@ button {
   /* ----------------------------------------------------
      5. GRUPO EVA SECTION (Fixes Screenshot 4)
      ---------------------------------------------------- */
-  .eva-master-section {
+  .eva-details-section {
     padding: 50px 0;
   }
   .eva-main-box {
@@ -4314,7 +4256,7 @@ button {
   /* ----------------------------------------------------
      7. SOBRE A YZA SECTION
      ---------------------------------------------------- */
-  .about-ref-section {
+  .about-yza-section {
     padding: 50px 0;
   }
   .about-ref-card {
@@ -4352,7 +4294,7 @@ button {
     line-height: 1.6;
     margin-bottom: 18px;
   }
-  .about-ref-text-block p {
+  .about-ref-paragraph {
     font-size: 0.92rem;
     line-height: 1.65;
   }
@@ -4457,10 +4399,10 @@ button {
     gap: 30px;
     text-align: center;
   }
-  .footer-brand-col {
+  .footer-brand {
     align-items: center;
   }
-  .footer-social-links {
+  .footer-social-pill {
     justify-content: center;
   }
 
@@ -4478,9 +4420,6 @@ button {
   }
   .wa-toggle-circle i {
     font-size: 1.55rem;
-  }
-  .wa-pulse-glow {
-    display: none; /* Reduce visual noise on mobile screens */
   }
   .wa-chat-window {
     width: calc(100vw - 28px);
