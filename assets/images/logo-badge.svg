@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGradBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C59B63" />
+      <stop offset="45%" stop-color="#E5C79E" />
+      <stop offset="100%" stop-color="#9C7338" />
+    </linearGradient>
+    <radialGradient id="sealAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDFB" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#FAF4EE" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#F2E4D8" stop-opacity="0.8"/>
+    </radialGradient>
+    <!-- Text Paths for curved luxury seal typography -->
+    <path id="topCurve" d="M 30,120 A 90,90 0 0,1 210,120" fill="none" />
+    <path id="bottomCurve" d="M 210,120 A 90,90 0 0,1 30,120" fill="none" />
+  </defs>
+
+  <!-- Background Medallion -->
+  <circle cx="120" cy="120" r="114" fill="url(#sealAura)" stroke="url(#goldGradBadge)" stroke-width="2" />
+  <circle cx="120" cy="120" r="108" fill="none" stroke="url(#goldGradBadge)" stroke-width="0.75" stroke-dasharray="3 3" opacity="0.8" />
+  <circle cx="120" cy="120" r="82" fill="none" stroke="url(#goldGradBadge)" stroke-width="1.2" opacity="0.6" />
+
+  <!-- Circular Outer Text (Generously spaced, perfectly contained) -->
+  <text font-family="'Montserrat', 'Inter', sans-serif" font-size="9" font-weight="600" letter-spacing="2.8" fill="#756256">
+    <textPath href="#topCurve" startOffset="50%" text-anchor="middle">
+      CONSTELAÇÃO SISTÊMICA
+    </textPath>
+  </text>
+
+  <text font-family="'Montserrat', 'Inter', sans-serif" font-size="8.5" font-weight="600" letter-spacing="3" fill="#A89487">
+    <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">
+      • YZA TERAPEUTA •
+    </textPath>
+  </text>
+
+  <!-- Center Monogram Emblem -->
+  <g transform="translate(120, 102)">
+    <!-- Sacred Triangle -->
+    <path d="M 0,-24 L 20,12 L -20,12 Z" fill="none" stroke="url(#goldGradBadge)" stroke-width="1.6" stroke-linejoin="round"/>
+    <!-- Heart / Petal Essence -->
+    <path d="M 0,-15 C 6,-6 10,2 0,9 C -10,2 -6,-6 0,-15 Z" fill="url(#goldGradBadge)" opacity="0.3"/>
+    <circle cx="0" cy="0" r="2.5" fill="url(#goldGradBadge)"/>
+  </g>
+
+  <!-- Centered Name -->
+  <text x="120" y="136" font-family="'Cormorant Garamond', Georgia, serif" font-size="20" font-weight="700" letter-spacing="3" fill="#2C2420" text-anchor="middle">
+    YZA
+  </text>
+  <text x="120" y="148" font-family="'Montserrat', 'Inter', sans-serif" font-size="7" font-weight="600" letter-spacing="3" fill="#8C7A70" text-anchor="middle">
+    OFICIAL
+  </text>
+</svg>

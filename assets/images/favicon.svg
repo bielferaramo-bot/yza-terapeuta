@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D8B3"/>
+      <stop offset="45%" stop-color="#C59B63"/>
+      <stop offset="100%" stop-color="#9E763B"/>
+    </linearGradient>
+    <radialGradient id="favBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34251D"/>
+      <stop offset="100%" stop-color="#1F1510"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Luxurious Circular Medallion (Stands out crisp on both light and dark browser tabs) -->
+  <circle cx="64" cy="64" r="61" fill="url(#favBg)" stroke="url(#favGold)" stroke-width="3"/>
+  <circle cx="64" cy="64" r="55" fill="none" stroke="url(#favGold)" stroke-width="1" stroke-dasharray="3 3" opacity="0.65"/>
+
+  <!-- Sacred Geometry / Systemic Triangle -->
+  <path d="M 64 22 L 97 82 L 31 82 Z" fill="none" stroke="url(#favGold)" stroke-width="3.5" stroke-linejoin="round"/>
+  
+  <!-- Inner Upward Petal of Consciousness -->
+  <path d="M 64 34 C 73 48 83 60 64 76 C 45 60 55 48 64 34 Z" fill="url(#favGold)" opacity="0.32"/>
+  <path d="M 64 34 C 73 48 83 60 64 76 C 45 60 55 48 64 34 Z" fill="none" stroke="url(#favGold)" stroke-width="2.2"/>
+
+  <!-- Core Golden Spark (Presença) -->
+  <circle cx="64" cy="60" r="4.5" fill="url(#favGold)"/>
+
+  <!-- Horizon Line of Belonging -->
+  <line x1="42" y1="82" x2="86" y2="82" stroke="url(#favGold)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Brand Monogram YZA -->
+  <text x="64" y="106" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="700" letter-spacing="4" fill="url(#favGold)" text-anchor="middle">
+    YZA
+  </text>
+</svg>
