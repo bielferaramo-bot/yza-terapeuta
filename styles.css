@@ -3756,7 +3756,7 @@ button {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .footer-logo-title {
@@ -3798,10 +3798,12 @@ button {
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   color: #FFF;
+  transition: all 0.25s ease;
 }
 
 .footer-social-pill a:hover {
   background-color: var(--color-terracotta);
+  color: #FFF;
 }
 
 .footer-column h4 {
@@ -3821,6 +3823,7 @@ button {
 .footer-column a {
   font-size: 0.9rem;
   color: #8C8077;
+  transition: all 0.25s ease;
 }
 
 .footer-column a:hover {
@@ -3828,16 +3831,66 @@ button {
   transform: translateX(4px);
 }
 
-.footer-column p {
-  font-size: 0.9rem;
-  color: #8C8077;
-  margin-bottom: 12px;
+.footer-schedule-card {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.footer-column p i { color: var(--color-gold); }
+.footer-schedule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm, 8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.25s ease;
+}
+
+.footer-schedule-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(200, 157, 102, 0.3);
+}
+
+.footer-schedule-item i {
+  color: var(--color-gold);
+  font-size: 1.05rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.footer-schedule-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.sched-title {
+  font-weight: 600;
+  color: #FFF;
+  font-size: 0.9rem;
+}
+
+.sched-desc {
+  font-size: 0.82rem;
+  color: #9C8E84;
+}
+
+.footer-location-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #8C8077;
+  margin-top: 4px;
+}
+
+.footer-location-tag i {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
 
 .footer-disclaimer-row {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -5036,16 +5089,95 @@ button {
     flex-shrink: 0;
     font-size: 0.95rem;
   }
+  .master-footer {
+    padding: 38px 0 24px;
+  }
   .footer-top-row {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24px;
+    margin-bottom: 28px;
     text-align: center;
   }
   .footer-brand {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+  .footer-about-text {
+    font-size: 0.84rem;
+    max-width: 320px;
+    margin: 0 auto 16px;
+    line-height: 1.55;
+    color: #9C8E84;
   }
   .footer-social-pill {
     justify-content: center;
+    gap: 10px;
+  }
+  .footer-column h4 {
+    font-size: 1.12rem;
+    margin-bottom: 14px;
+    position: relative;
+    display: inline-block;
+  }
+  .footer-column h4::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--color-gold);
+    margin: 6px auto 0;
+    opacity: 0.6;
+  }
+  .footer-nav-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px 12px !important;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+  .footer-nav-list li {
+    display: flex;
+  }
+  .footer-nav-list a {
+    font-size: 0.85rem !important;
+    color: #A3968C !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 38px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.025);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+  }
+  .footer-nav-list a:hover {
+    color: #FFF !important;
+    background: rgba(200, 157, 102, 0.12);
+    border-color: rgba(200, 157, 102, 0.3);
+  }
+  .footer-schedule-card {
+    max-width: 330px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .footer-location-tag {
+    justify-content: center;
+    text-align: center;
+    margin-top: 8px;
+  }
+  .footer-disclaimer-row {
+    padding-top: 18px;
+    text-align: center;
+    font-size: 0.74rem;
+    line-height: 1.5;
+  }
+  .footer-copy {
+    font-size: 0.72rem;
   }
 
   /* ----------------------------------------------------
