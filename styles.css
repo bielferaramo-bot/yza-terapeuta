@@ -3422,26 +3422,41 @@ button {
 }
 
 .about-ref-sub-action {
-  margin-top: 4px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .about-ref-ig-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--color-muted);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.25s ease;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  background: rgba(200, 157, 102, 0.1);
+  border: 1px solid rgba(200, 157, 102, 0.32);
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .about-ref-ig-link:hover {
   color: var(--color-walnut);
+  border-color: #C13584;
+  background: #FFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(193, 53, 132, 0.12);
 }
 
 .about-ref-ig-link i {
-  color: var(--color-terracotta);
+  color: #C13584;
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 /* ==========================================================
