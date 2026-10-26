@@ -5146,3 +5146,52 @@ button {
     font-size: 0.85rem;
   }
 }
+
+
+/* ==========================================================
+   Mobile-Only Clean 2-Pillar Reassurance Strip
+   ========================================================== */
+.mobile-pillars-strip {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 12px !important;
+  padding-top: 18px !important;
+  margin-top: 6px !important;
+  border-top: 1px solid rgba(200, 157, 102, 0.22) !important;
+}
+
+.mobile-pillars-strip .c-pillar-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 5px !important;
+  background: #FAF6F0 !important;
+  padding: 12px 10px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(200, 157, 102, 0.25) !important;
+}
+
+.mobile-pillars-strip .c-pillar-icon {
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 2px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(200, 157, 102, 0.3) !important;
+  color: var(--color-terracotta) !important;
+}
+
+.mobile-pillars-strip .c-pillar-text strong {
+  font-size: 0.82rem !important;
+  color: var(--color-walnut) !important;
+  display: block !important;
+  line-height: 1.25 !important;
+}
+
+.mobile-pillars-strip .c-pillar-text span {
+  font-size: 0.72rem !important;
+  color: var(--color-muted) !important;
+  line-height: 1.25 !important;
+  display: block !important;
+}
