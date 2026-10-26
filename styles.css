@@ -3895,11 +3895,11 @@ button {
 
 .wa-chat-window {
   position: absolute;
-  bottom: 76px;
+  bottom: 74px;
   right: 0;
-  width: 320px;
+  width: 270px;
   background-color: #FFF;
-  border-radius: var(--radius-lg);
+  border-radius: 14px;
   box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18);
   border: 1px solid var(--color-border);
   overflow: hidden;
@@ -3918,16 +3918,16 @@ button {
 .wa-chat-header {
   background: linear-gradient(135deg, #075E54 0%, #128C7E 100%);
   color: #FFF;
-  padding: 16px;
+  padding: 10px 12px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   position: relative;
 }
 
 .wa-chat-photo {
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #FFF;
@@ -3950,10 +3950,10 @@ button {
 
 .wa-chat-close {
   position: absolute;
-  top: 10px;
-  right: 12px;
-  width: 34px;
-  height: 34px;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3961,7 +3961,7 @@ button {
   color: rgba(255, 255, 255, 0.85);
   background: rgba(255, 255, 255, 0.15);
   border: none;
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   line-height: 1;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -3973,16 +3973,16 @@ button {
 }
 
 .wa-chat-message-box {
-  padding: 18px 16px;
+  padding: 10px 12px;
   background-color: #ECE5DD;
 }
 
 .wa-chat-message-box p {
   background-color: #FFF;
-  padding: 12px 14px;
-  border-radius: 0 12px 12px 12px;
-  font-size: 0.875rem;
-  line-height: 1.5;
+  padding: 8px 10px;
+  border-radius: 0 10px 10px 10px;
+  font-size: 0.78rem;
+  line-height: 1.35;
   color: #303030;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
@@ -3991,12 +3991,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   background-color: #25D366;
   color: #FFF;
   font-weight: 700;
-  font-size: 0.9rem;
-  padding: 14px;
+  font-size: 0.8rem;
+  padding: 9px 12px;
   transition: var(--transition);
 }
 
@@ -5049,11 +5049,11 @@ button {
     font-size: 1.55rem;
   }
   .wa-chat-window {
-    width: calc(100vw - 28px);
-    max-width: 320px;
+    width: calc(100vw - 36px);
+    max-width: 250px;
     right: 0;
-    bottom: 66px;
-    border-radius: 18px;
+    bottom: 60px;
+    border-radius: 14px;
   }
 }
 
