@@ -2179,12 +2179,35 @@ button {
   display: none;
 }
 
-@media (max-width: 992px) {
+/* Ocultar mesa interativa apenas em celulares smartphones (<= 768px) */
+@media (max-width: 768px) {
   .constellation-desktop-view {
     display: none !important;
   }
   .constellation-mobile-view {
     display: block !important;
+  }
+}
+
+/* Em notebooks e telas médias (769px a 1100px), a mesa interativa com bonecos fica 100% responsiva */
+@media (max-width: 1100px) and (min-width: 769px) {
+  .constellation-desktop-view {
+    display: block !important;
+  }
+  .constellation-mobile-view {
+    display: none !important;
+  }
+  .constellation-split-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .table-visual-column {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .table-insight-column {
+    width: 100%;
   }
 }
 
