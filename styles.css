@@ -689,25 +689,7 @@ button {
 
 /* Hero Name Pill on Portrait */
 .hero-name-pill {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(200, 157, 102, 0.45);
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  color: var(--color-walnut);
-  box-shadow: 0 8px 24px rgba(43, 29, 23, 0.12);
-  z-index: 3;
+  display: none !important;
 }
 
 .hero-name-dot {
