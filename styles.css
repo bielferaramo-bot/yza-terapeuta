@@ -687,9 +687,28 @@ button {
   transform: rotate(8deg) scale(1.04);
 }
 
-/* Hero Name Pill on Portrait */
+/* Hero Name Pill on Portrait (Positioned above image edge to never obstruct portrait/hair) */
 .hero-name-pill {
-  display: none !important;
+  position: absolute;
+  top: -16px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 157, 102, 0.45);
+  padding: 7px 15px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--color-walnut);
+  box-shadow: 0 6px 20px rgba(43, 29, 23, 0.12);
+  z-index: 4;
+  white-space: nowrap;
 }
 
 .hero-name-dot {
@@ -4387,8 +4406,8 @@ button {
     height: 74px;
   }
   .hero-name-pill {
-    top: 14px;
-    left: 14px;
+    top: -15px;
+    left: 10px;
     font-size: 0.74rem;
     padding: 6px 13px;
     box-shadow: 0 4px 14px rgba(43, 29, 23, 0.1);
